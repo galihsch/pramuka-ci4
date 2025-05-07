@@ -1,4 +1,4 @@
-# Aplikasi Pendaftaran Peserta Pramuka
+# Sistem Pendaftaran Sederhana
 
 Repository ini merupakan tugas mata kuliah Pemrograman Web.
 
@@ -14,11 +14,11 @@ Repository ini merupakan tugas mata kuliah Pemrograman Web.
 
 ## Tentang Aplikasi
 
-Aplikasi ini adalah sistem pendaftaran peserta pramuka yang dibuat menggunakan framework CodeIgniter 4. Aplikasi ini memiliki fitur-fitur berikut:
+Aplikasi ini adalah sistem pendaftaran sederhana yang dibuat menggunakan framework CodeIgniter 4. Aplikasi ini memiliki fitur-fitur berikut:
 
 1. Pendaftaran peserta baru
 2. Melihat daftar peserta terdaftar
-3. Mengelola status peserta (Proses Verifikasi, Diterima, Ditolak, Perbaiki, Mundur)
+3. Menampilkan status peserta (Proses Verifikasi, Diterima, Ditolak)
 4. Validasi data peserta
 
 ## Teknologi yang Digunakan
@@ -59,7 +59,7 @@ Database menggunakan tabel `peserta` dengan field:
 2. Jalankan `composer install` untuk menginstal dependencies
 3. Konfigurasi file `.env` dari file `env` dan atur database
 4. Jalankan migrasi dengan perintah `php spark migrate`
-5. Import data awal dari file `pramuka.sql` (jika diperlukan)
+5. Import data awal dari file `database.sql` (jika diperlukan)
 6. Jalankan aplikasi dengan perintah `php spark serve`
 
 ## Penggunaan Aplikasi
