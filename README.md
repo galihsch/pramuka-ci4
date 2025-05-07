@@ -1,69 +1,74 @@
-# CodeIgniter 4 Application Starter
+# Aplikasi Pendaftaran Peserta Pramuka
 
-## What is CodeIgniter?
+Repository ini merupakan tugas mata kuliah Pemrograman Web.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Screenshot
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+![alt text](img/ss1.png)
+![alt text](img/ss2.png)
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Data Mahasiswa
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- **Nama:** Galih Putro Aji
+- **NPM:** 1101221174
 
-## Installation & updates
+## Tentang Aplikasi
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Aplikasi ini adalah sistem pendaftaran peserta pramuka yang dibuat menggunakan framework CodeIgniter 4. Aplikasi ini memiliki fitur-fitur berikut:
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+1. Pendaftaran peserta baru
+2. Melihat daftar peserta terdaftar
+3. Mengelola status peserta (Proses Verifikasi, Diterima, Ditolak, Perbaiki, Mundur)
+4. Validasi data peserta
 
-## Setup
+## Teknologi yang Digunakan
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+- PHP 8.1+
+- CodeIgniter 4
+- MySQL Database
+- Bootstrap (untuk tampilan frontend)
+- JavaScript/jQuery
 
-## Important Change with index.php
+## Struktur Database
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Database menggunakan tabel `peserta` dengan field:
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+- id (Primary Key)
+- nik
+- nama
+- tempat_lahir
+- tanggal_lahir
+- jenis_kelamin
+- telepon
+- pendidikan
+- alamat
+- kab_kota
+- nama_bank
+- nama_rekening
+- no_rekening
+- id_cabang
+- id_golongan
+- status_peserta
+- catatan_verifikasi
+- created_at
+- updated_at
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## Cara Instalasi
 
-## Repository Management
+1. Clone repository ini
+2. Jalankan `composer install` untuk menginstal dependencies
+3. Konfigurasi file `.env` dari file `env` dan atur database
+4. Jalankan migrasi dengan perintah `php spark migrate`
+5. Import data awal dari file `pramuka.sql` (jika diperlukan)
+6. Jalankan aplikasi dengan perintah `php spark serve`
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## Penggunaan Aplikasi
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+1. Buka URL aplikasi (<http://localhost:8080>)
+2. Navigasi ke menu "Tambah Peserta" untuk mendaftarkan peserta baru
+3. Lihat daftar peserta pada halaman utama
+4. Status peserta akan berubah warna sesuai dengan statusnya (Diterima/Hijau, Ditolak/Merah, dll)
 
-## Server Requirements
+---
 
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-# pramuka-ci4
+© 2025 Galih Putro Aji - NPM 1101221174

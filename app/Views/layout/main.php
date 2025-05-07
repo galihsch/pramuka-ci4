@@ -17,10 +17,10 @@
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <span class="fs-4">Sistem Pendaftaran</span>
+                <span class="fs-4">Sistem Pendaftaran </span>
             </a>
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="<?= base_url('/') ?>" class="nav-link" aria-current="page">Beranda</a></li>
+                <!-- <li class="nav-item"><a href="<?= base_url('/') ?>" class="nav-link" aria-current="page">Beranda</a></li> -->
                 <li class="nav-item"><a href="<?= base_url('peserta') ?>" class="nav-link">Daftar Peserta</a></li>
                 <li class="nav-item"><a href="<?= base_url('peserta/create') ?>" class="nav-link">Pendaftaran</a></li>
             </ul>
@@ -33,7 +33,7 @@
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
             <div class="row">
                 <div class="col-12 col-md text-center">
-                    <small class="mb-3 text-body-secondary">&copy; <?= date('Y') ?> - Sistem Pendaftaran</small>
+                    <small class="mb-3 text-body-secondary">Sistem Pendaftaran  &copy; <?= date('Y') ?> - Galih Putro Aji</small>
                 </div>
             </div>
         </footer>
